@@ -17,10 +17,6 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
 {
     public class Main : IPlugin, IPluginI18n, IContextMenu, ISavable, IDisposable
     {
-        private static readonly IFileSystem FileSystem = new FileSystem();
-        private static readonly IPath Path = FileSystem.Path;
-        private static readonly IFile File = FileSystem.File;
-
         private readonly DuckDuckGoUriParser _duckDuckGoUriParser;
         private readonly UriResolver _uriResolver;
         private readonly PluginJsonStorage<UriSettings> _storage;
@@ -37,7 +33,7 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
             _registryWrapper = new RegistryWrapper();
         }
 
-        public string BrowserIconPath { get; set; }
+        public string DuckIconPath { get; set; }
 
         public string BrowserPath { get; set; }
 
@@ -66,7 +62,7 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
                     Title = Properties.Resources.plugin_action,
                     SubTitle = BrowserPath,
                     IcoPath = _uriSettings.ShowBrowserIcon
-                          ? BrowserIconPath
+                          ? DuckIconPath
                           : DefaultIconPath,
                     Action = action =>
                     {
@@ -91,10 +87,10 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
                 var uriResultString = uriResult.ToString();
                 results.Add(new Result
                 {
-                    Title = uriResultString,
+                    Title = query.ToString(),
                     SubTitle = Properties.Resources.plugin_action,
                     IcoPath = _uriSettings.ShowBrowserIcon
-                        ? BrowserIconPath
+                        ? DuckIconPath
                         : DefaultIconPath,
                     Action = action =>
                     {
@@ -159,46 +155,18 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
         {
             try
             {
-                var progId = _registryWrapper.GetRegistryValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\Shell\\Associations\\UrlAssociations\\http\\UserChoice", "ProgId");
-                var programLocation =
-
-                    // Resolve App Icon (UWP)
-                    _registryWrapper.GetRegistryValue("HKEY_CLASSES_ROOT\\" + progId + "\\Application", "ApplicationIcon")
-
-                    // Resolves default  file association icon (UWP + Normal)
-                    ?? _registryWrapper.GetRegistryValue("HKEY_CLASSES_ROOT\\" + progId + "\\DefaultIcon", null);
-
-                // "Handles 'Indirect Strings' (UWP programs)"
-                // Using Ordinal since this is internal and used with a symbol
-                if (programLocation.StartsWith("@", StringComparison.Ordinal))
+                if (newTheme == Theme.Light || newTheme == Theme.HighContrastWhite)
                 {
-                    var directProgramLocationStringBuilder = new StringBuilder(128);
-                    if (NativeMethods.SHLoadIndirectString(programLocation, directProgramLocationStringBuilder, (uint)directProgramLocationStringBuilder.Capacity, IntPtr.Zero) ==
-                        NativeMethods.Hresult.Ok)
-                    {
-                        // Check if there's a postfix with contract-white/contrast-black icon is available and use that instead
-                        var directProgramLocation = directProgramLocationStringBuilder.ToString();
-                        var themeIcon = newTheme == Theme.Light || newTheme == Theme.HighContrastWhite ? "contrast-white" : "contrast-black";
-                        var extension = Path.GetExtension(directProgramLocation);
-                        var themedProgLocation = $"{directProgramLocation.Substring(0, directProgramLocation.Length - extension.Length)}_{themeIcon}{extension}";
-                        BrowserIconPath = File.Exists(themedProgLocation)
-                            ? themedProgLocation
-                            : directProgramLocation;
-                    }
+                    DuckIconPath = "Images/duck.png";
                 }
                 else
                 {
-                    // Using Ordinal since this is internal and used with a symbol
-                    var indexOfComma = programLocation.IndexOf(',', StringComparison.Ordinal);
-                    BrowserIconPath = indexOfComma > 0
-                        ? programLocation.Substring(0, indexOfComma)
-                        : programLocation;
-                    BrowserPath = BrowserIconPath;
+                    DuckIconPath = "Images/duck.png";
                 }
             }
             catch (Exception e)
             {
-                BrowserIconPath = DefaultIconPath;
+                DuckIconPath = DefaultIconPath;
                 Log.Exception("Exception when retrieving icon", e, GetType());
             }
         }

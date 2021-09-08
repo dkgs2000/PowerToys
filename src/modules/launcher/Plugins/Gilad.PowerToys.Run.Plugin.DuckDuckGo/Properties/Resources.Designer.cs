@@ -61,7 +61,7 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open in default browser.
+        ///   Looks up a localized string similar to Search DuckDuckGo.
         /// </summary>
         public static string plugin_action {
             get {
@@ -88,7 +88,7 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to URI Handler.
+        ///   Looks up a localized string similar to DuckDuckGo.
         /// </summary>
         public static string plugin_name {
             get {
