@@ -1,0 +1,13 @@
+{
+  "ID": "122B6A39D567817C8CFD200B0EE5EAAA",
+  "ActionKeyword": "//",
+  "IsGlobal": true,
+  "Name": "Windows DuckDuckGo Handler",
+  "Author": "Gilad",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "http://aka.ms/PowerToys",
+  "ExecuteFileName": "Gilad.PowerToys.Run.Plugin.DuckDuckGo.dll",
+  "IcoPathDark": "Images\\uri.dark.png",
+  "IcoPathLight": "Images\\uri.light.png"
+}

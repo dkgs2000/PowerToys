@@ -48,3 +48,6 @@ using System.Diagnostics.CodeAnalysis;
 
 // FxCop warning suppression for uninstantiated TestFixture classes
 [assembly: SuppressMessage("Microsoft.Performance", "CA1812: Avoid uninstantiated internal classes", Scope = "module", Justification = "CA1812 will be thrown for every file in the test project. This is mentioned here: dotnet/roslyn-analyzers#1830")]
+
+// Header suupression for custom-written files
+[assembly: SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1633:File should have header", Justification = "Custom-written file", Scope = "namespace", Target = "~N:Gilad.PowerToys.Run.Plugin.DuckDuckGo.UriHelper")]

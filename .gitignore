@@ -344,3 +344,6 @@ src/common/Telemetry/*.etl
 /src/modules/previewpane/SvgThumbnailProvider/$(SolutionDir)$(Platform)/$(Configuration)/modules/FileExplorerPreview/SvgThumbnailProvider.xml
 /src/modules/powerrename/ui/RCa24464
 /src/modules/powerrename/ui/RCb24464
+
+# Custom Plugins
+#/src/modules/launcher/Plugins/Gilad.PowerToys.Run.Plugin.DuckDuckGo
