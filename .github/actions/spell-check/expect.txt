@@ -15,6 +15,7 @@ accessibilityinsights
 Acl
 aclapi
 AColumn
+Accessible
 acos
 acrt
 Actioncenter
@@ -102,6 +103,7 @@ asm
 asmx
 aspnet
 aspx
+ASSOCCHANGED
 ASYNCWINDOWPLACEMENT
 ASYNCWINDOWPOS
 atl
@@ -270,6 +272,7 @@ codereview
 Codespaces
 COINIT
 colorconv
+colorformat
 colorhistory
 colorhistorylimit
 COLORKEY
@@ -393,6 +396,7 @@ dbg
 Dbghelp
 DBLCLKS
 DBLEPSILON
+dchristensen
 DCOM
 dcomp
 DComposition
@@ -804,6 +808,7 @@ Hyperlink
 IAction
 IActivated
 IAnimatable
+ianjoneill
 IApp
 IApplication
 IAppx
@@ -840,6 +845,7 @@ IDirectory
 IDispatch
 IDisposable
 idl
+IDLIST
 IDOK
 IDOn
 IDR
@@ -1024,6 +1030,7 @@ ixx
 IYUV
 IZone
 IZoom
+jakeoeding
 JArray
 jarro
 Jarryd
@@ -1048,6 +1055,7 @@ jyuwono
 kbd
 KBDLLHOOKSTRUCT
 kbm
+KERNELBASE
 KEYBDINPUT
 keyboardeventhandlers
 keyboardmanager
@@ -1443,6 +1451,7 @@ nuget
 null
 nullopt
 nullptr
+numberbox
 NUMLOCK
 NUMPAD
 nunit
@@ -1525,6 +1534,7 @@ PCWSTR
 pdb
 pdbonly
 pdf
+pdfpreviewhandler
 pdo
 pdto
 pdtobj
@@ -1847,6 +1857,8 @@ sfgao
 SFGAOF
 SHAREIMAGELISTS
 sharpkeys
+SHCNE
+SHCNF
 shcore
 shellapi
 SHELLDLL
@@ -2101,6 +2113,7 @@ todo
 toggleswitch
 toolbar
 Toolchain
+toolkitcontrols
 toolkitconverters
 toolset
 toolstrip
