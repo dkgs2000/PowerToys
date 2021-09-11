@@ -157,11 +157,11 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
             {
                 if (newTheme == Theme.Light || newTheme == Theme.HighContrastWhite)
                 {
-                    DuckIconPath = "Images/duck.png";
+                    DuckIconPath = "Images/duck.light.png";
                 }
                 else
                 {
-                    DuckIconPath = "Images/duck.png";
+                    DuckIconPath = "Images/duck.dark.png";
                 }
             }
             catch (Exception e)
@@ -175,11 +175,11 @@ namespace Gilad.PowerToys.Run.Plugin.DuckDuckGo
         {
             if (theme == Theme.Light || theme == Theme.HighContrastWhite)
             {
-                DefaultIconPath = "Images/uri.light.png";
+                DefaultIconPath = "Images/duck.light.png";
             }
             else
             {
-                DefaultIconPath = "Images/uri.dark.png";
+                DefaultIconPath = "Images/duck.dark.png";
             }
         }
 
