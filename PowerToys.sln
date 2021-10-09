@@ -364,6 +364,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VideoConference", "VideoCon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gilad.PowerToys.Run.Plugin.DuckDuckGo", "src\modules\launcher\Plugins\Gilad.PowerToys.Run.Plugin.DuckDuckGo\Gilad.PowerToys.Run.Plugin.DuckDuckGo.csproj", "{EBECDB72-C62D-4C8F-8052-0669559E1C11}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gilad.PowerToys.Run.Plugin.WebSearch", "src\modules\launcher\Plugins\Gilad.PowerToys.Run.Plugin.WebSearch\Gilad.PowerToys.Run.Plugin.WebSearch.csproj", "{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1538,6 +1540,18 @@ Global
 		{EBECDB72-C62D-4C8F-8052-0669559E1C11}.Release|x64.ActiveCfg = Release|x64
 		{EBECDB72-C62D-4C8F-8052-0669559E1C11}.Release|x64.Build.0 = Release|x64
 		{EBECDB72-C62D-4C8F-8052-0669559E1C11}.Release|x86.ActiveCfg = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|ARM.ActiveCfg = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|ARM64.ActiveCfg = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|x64.ActiveCfg = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|x64.Build.0 = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Debug|x86.ActiveCfg = Debug|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|Any CPU.ActiveCfg = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|ARM.ActiveCfg = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|ARM64.ActiveCfg = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|x64.ActiveCfg = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|x64.Build.0 = Release|x64
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1652,6 +1666,7 @@ Global
 		{AC2857B4-103D-4D6D-9740-926EBF785042} = {470FBAF9-E1F8-4F3E-8786-198A1C81C8A8}
 		{470FBAF9-E1F8-4F3E-8786-198A1C81C8A8} = {4574FDD0-F61D-4376-98BF-E5A1262C11EC}
 		{EBECDB72-C62D-4C8F-8052-0669559E1C11} = {4AFC9975-2456-4C70-94A4-84073C1CED93}
+		{B2B6EDDF-5E22-4875-A1AF-211EF9EEC765} = {4AFC9975-2456-4C70-94A4-84073C1CED93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C3A2F9D1-7930-4EF4-A6FC-7EE0A99821D0}

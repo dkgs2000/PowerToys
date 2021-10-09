@@ -1,0 +1,13 @@
+{
+  "ID": "122B6A39D567817C8CFD200B0EE5EBBB",
+  "ActionKeyword": "",
+  "IsGlobal": true,
+  "Name": "Web Search",
+  "Author": "Gilad",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "http://aka.ms/PowerToys",
+  "ExecuteFileName": "Gilad.PowerToys.Run.Plugin.WebSearch.dll",
+  "IcoPathDark": "Images\\duck.dark.png",
+  "IcoPathLight": "Images\\duck.light.png"
+}
